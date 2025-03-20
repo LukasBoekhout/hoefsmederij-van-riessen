@@ -4,8 +4,6 @@ export default class StrapiAPI {
     instance;
 
     constructor() {
-        console.log("process.env", process.env.NEXT_PUBLIC_API_URL);
-
         this.instance = axios.create({
             baseURL: process.env.NEXT_PUBLIC_API_URL,
             timeout: 10000,
@@ -17,6 +15,12 @@ export default class StrapiAPI {
     }
 
     async getHome() {
-        return await this.instance.get("/home");
+        const response = await this.instance.get("/home");
+        return response.data;
+    }
+
+    async getContact() {
+        const response = await this.instance.get("/contact");
+        return response.data;
     }
 }

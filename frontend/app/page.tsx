@@ -6,11 +6,6 @@ import { HorseshoeDivider } from "@/components/horseshoe-divider";
 import StrapiAPI from "@/services/strapi_api";
 
 export default async function Home() {
-    console.log(
-        "`${process.env.NEXT_PUBLIC_API_URL}/home`",
-        `${process.env.NEXT_PUBLIC_API_URL}/home`
-    );
-
     const strapi = new StrapiAPI();
 
     const home = await strapi.getHome();
