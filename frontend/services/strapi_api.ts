@@ -1,3 +1,6 @@
+import type { StrapiApiObject } from "@/types/api";
+import type { GeneralData } from "@/types/general";
+import type { HomeData } from "@/types/home";
 import axios from "axios";
 
 export default class StrapiAPI {
@@ -5,7 +8,7 @@ export default class StrapiAPI {
 
     constructor() {
         this.instance = axios.create({
-            baseURL: process.env.NEXT_PUBLIC_API_URL,
+            baseURL: process.env.NEXT_PUBLIC_API_URL + "/api",
             timeout: 10000,
             headers: {
                 "Content-Type": "application/json",
@@ -14,8 +17,13 @@ export default class StrapiAPI {
         });
     }
 
-    async getHome() {
-        const response = await this.instance.get("/home");
+    async getGeneral(): Promise<StrapiApiObject<GeneralData>> {
+        const response = await this.instance.get("/general");
+        return response.data;
+    }
+
+    async getHome(): Promise<StrapiApiObject<HomeData>> {
+        const response = await this.instance.get("/home?populate=*");
         return response.data;
     }
 

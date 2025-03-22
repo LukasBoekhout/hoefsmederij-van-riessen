@@ -468,12 +468,10 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
                     localized: true;
                 };
             }>;
-        heroImage: Schema.Attribute.Media<
-            "images" | "files" | "videos" | "audios"
-        > &
+        heroImage: Schema.Attribute.Media<"images"> &
             Schema.Attribute.SetPluginOptions<{
                 i18n: {
-                    localized: true;
+                    localized: false;
                 };
             }>;
         heroText: Schema.Attribute.String &
@@ -516,6 +514,36 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         > &
             Schema.Attribute.Private;
         publishedAt: Schema.Attribute.DateTime;
+        updatedAt: Schema.Attribute.DateTime;
+        updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+            Schema.Attribute.Private;
+    };
+}
+
+export interface ApiServiceService extends Struct.CollectionTypeSchema {
+    collectionName: "services";
+    info: {
+        description: "";
+        displayName: "Service";
+        pluralName: "services";
+        singularName: "service";
+    };
+    options: {
+        draftAndPublish: true;
+    };
+    attributes: {
+        createdAt: Schema.Attribute.DateTime;
+        createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+            Schema.Attribute.Private;
+        Description: Schema.Attribute.String;
+        locale: Schema.Attribute.String & Schema.Attribute.Private;
+        localizations: Schema.Attribute.Relation<
+            "oneToMany",
+            "api::service.service"
+        > &
+            Schema.Attribute.Private;
+        publishedAt: Schema.Attribute.DateTime;
+        Service: Schema.Attribute.String & Schema.Attribute.Required;
         updatedAt: Schema.Attribute.DateTime;
         updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
             Schema.Attribute.Private;
@@ -1044,6 +1072,7 @@ declare module "@strapi/strapi" {
             "api::general.general": ApiGeneralGeneral;
             "api::home.home": ApiHomeHome;
             "api::page.page": ApiPagePage;
+            "api::service.service": ApiServiceService;
             "plugin::content-releases.release": PluginContentReleasesRelease;
             "plugin::content-releases.release-action": PluginContentReleasesReleaseAction;
             "plugin::i18n.locale": PluginI18NLocale;

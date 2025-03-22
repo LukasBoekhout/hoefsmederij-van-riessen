@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { HorseshoeDivider } from "@/components/horseshoe-divider";
-import { AnimatedHorse } from "@/components/animated-horse";
 import { useEffect, useState } from "react";
 
 export default function NotFound() {
@@ -339,7 +338,6 @@ export default function NotFound() {
                     </div>
                 </div>
             </div>
-            <AnimatedHorse />
         </main>
     );
 }

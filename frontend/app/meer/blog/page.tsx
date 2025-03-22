@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PageTransition } from "@/components/page-transition";
-import { AnimatedHorse } from "@/components/animated-horse";
 import { HorseshoeDivider } from "@/components/horseshoe-divider";
 import { PageHeader } from "@/components/page-header";
 
@@ -262,7 +261,6 @@ export default function Blog() {
                     </div>
                 </section>
             </PageTransition>
-            <AnimatedHorse />
         </main>
     );
 }

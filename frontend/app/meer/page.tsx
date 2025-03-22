@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PageTransition } from "@/components/page-transition";
-import { AnimatedHorse } from "@/components/animated-horse";
 import { HorseshoeDivider } from "@/components/horseshoe-divider";
 
 export default function Meer() {
@@ -243,7 +242,6 @@ export default function Meer() {
                     </div>
                 </section>
             </PageTransition>
-            <AnimatedHorse />
         </main>
     );
 }

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { PageTransition } from "@/components/page-transition";
-import { AnimatedHorse } from "@/components/animated-horse";
 import { HorseshoeDivider } from "@/components/horseshoe-divider";
 import { PageHeader } from "@/components/page-header";
 
@@ -237,7 +236,6 @@ export default function OverOns() {
                     </div>
                 </section>
             </PageTransition>
-            <AnimatedHorse />
         </main>
     );
 }

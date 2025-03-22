@@ -30,33 +30,6 @@ export function About() {
                     transition={{ duration: 0.7 }}
                     className="max-w-3xl mx-auto mb-12"
                 >
-                    <div className="flex items-center mb-6">
-                        <svg
-                            className="w-8 h-8 text-amber-600 mr-3"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M18 4L21 7M21 7L18 10M21 7H17C15.8954 7 15 7.89543 15 9V10M3 17L6 20M6 20L9 17M6 20H10C11.1046 20 12 19.1046 12 18V17"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                            <path
-                                d="M14.5 16.5L9.5 11.5M9.5 11.5L8 13M9.5 11.5L11 10"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                        <h2 className="text-2xl md:text-3xl font-bold text-slate-800">
-                            Traditie & Vakmanschap
-                        </h2>
-                    </div>
-
                     <div className="prose prose-slate max-w-none">
                         <p>
                             Geboren in Bloemendaal heb ik van mijn vader en zijn

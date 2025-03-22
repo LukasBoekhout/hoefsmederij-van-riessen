@@ -1,4 +1,3 @@
-import { AnimatedHorse } from "@/components/animated-horse";
 import { ContactForm } from "@/components/contact-form";
 import { HorseshoeDivider } from "@/components/horseshoe-divider";
 import { PageHeader } from "@/components/page-header";
@@ -136,7 +135,6 @@ export default async function Contact() {
                     </div>
                 </section>
             </PageTransition>
-            <AnimatedHorse />
         </main>
     );
 }

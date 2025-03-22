@@ -1,5 +1,5 @@
 import { PageTransition } from "@/components/page-transition";
-import { AnimatedHorse } from "@/components/animated-horse";
+
 import { PageHeader } from "@/components/page-header";
 
 export default function Privacy() {
@@ -142,7 +142,6 @@ export default function Privacy() {
                     </div>
                 </section>
             </PageTransition>
-            <AnimatedHorse />
         </main>
     );
 }

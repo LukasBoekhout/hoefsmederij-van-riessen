@@ -1,5 +1,4 @@
 import { PageTransition } from "@/components/page-transition";
-import { AnimatedHorse } from "@/components/animated-horse";
 import { PageHeader } from "@/components/page-header";
 
 export default function Terms() {
@@ -148,7 +147,6 @@ export default function Terms() {
                     </div>
                 </section>
             </PageTransition>
-            <AnimatedHorse />
         </main>
     );
 }

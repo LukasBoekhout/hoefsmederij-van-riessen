@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { HorseshoeDivider } from "@/components/horseshoe-divider";
-import { AnimatedHorse } from "@/components/animated-horse";
 import { PageTransition } from "@/components/page-transition";
 
 export default function ComingSoon() {
@@ -177,7 +176,6 @@ export default function ComingSoon() {
                     </div>
                 </div>
             </PageTransition>
-            <AnimatedHorse />
         </main>
     );
 }
