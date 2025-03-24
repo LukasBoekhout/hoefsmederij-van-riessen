@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { TbHorseshoe } from "react-icons/tb";
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -71,44 +72,11 @@ export function Navbar() {
                         href="/"
                         className="text-white text-xl font-bold flex items-center"
                     >
-                        {/* Horseshoe icon */}
-                        <svg
-                            className="w-8 h-8 mr-2 text-amber-500"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M12 3C7 3 3 7 3 12C3 17 7 21 12 21C17 21 21 17 21 12"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M21 12C21 9.5 19 4 12 4"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M12 4C5 4 3 9.5 3 12"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M7 17L7.01 17"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M17 17L17.01 17"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                            />
-                        </svg>
+                        <TbHorseshoe
+                            className="text-amber-600 mr-3 rotate-180"
+                            size={30}
+                        />
+
                         <span className="relative">
                             Hoefsmederij van Riessen
                             <motion.span

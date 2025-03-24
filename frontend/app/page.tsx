@@ -13,6 +13,8 @@ export default async function Home() {
     const general = data[0]?.data;
     const home = data[1]?.data;
 
+    console.log("home", home);
+
     return (
         <main className="min-h-screen bg-white">
             <PageTransition>
@@ -20,11 +22,18 @@ export default async function Home() {
                     title={general.websiteName}
                     subtitle={home.heroText}
                     imageUrl={
-                        process.env.NEXT_PUBLIC_API_URL + home.heroImage?.url
+                        (process.env.NEXT_PUBLIC_API_URL ?? "") +
+                        (home.heroImage?.url ?? "")
                     }
                 />
+
                 <HorseshoeDivider />
-                <About />
+
+                <About
+                    title={home.page?.headerTitle}
+                    content={home.page?.content}
+                    images={home.images}
+                />
             </PageTransition>
         </main>
     );

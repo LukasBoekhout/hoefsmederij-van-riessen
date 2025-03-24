@@ -1,24 +1,28 @@
 {
-    "kind": "collectionType",
-    "collectionName": "pages",
-    "info": {
-        "singularName": "page",
-        "pluralName": "pages",
-        "displayName": "Page"
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headerTitle": {
+      "type": "string"
     },
-    "options": {
-        "draftAndPublish": true
+    "headerDescription": {
+      "type": "string"
     },
-    "pluginOptions": {},
-    "attributes": {
-        "headerTitle": {
-            "type": "string"
-        },
-        "headerDescription": {
-            "type": "string"
-        },
-        "Content": {
-            "type": "richtext"
-        }
+    "content": {
+      "type": "blocks"
+    },
+    "name": {
+      "type": "uid"
     }
+  }
 }

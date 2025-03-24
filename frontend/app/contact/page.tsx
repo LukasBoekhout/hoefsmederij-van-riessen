@@ -59,6 +59,7 @@ export default async function Contact() {
                                             <h3 className="font-semibold text-slate-800">
                                                 Adres
                                             </h3>
+
                                             <BlocksRenderer
                                                 content={contact?.address}
                                             />

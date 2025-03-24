@@ -480,6 +480,12 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
                     localized: true;
                 };
             }>;
+        images: Schema.Attribute.Media<"images", true> &
+            Schema.Attribute.SetPluginOptions<{
+                i18n: {
+                    localized: true;
+                };
+            }>;
         locale: Schema.Attribute.String;
         localizations: Schema.Attribute.Relation<"oneToMany", "api::home.home">;
         page: Schema.Attribute.Relation<"oneToOne", "api::page.page">;
@@ -493,6 +499,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
 export interface ApiPagePage extends Struct.CollectionTypeSchema {
     collectionName: "pages";
     info: {
+        description: "";
         displayName: "Page";
         pluralName: "pages";
         singularName: "page";
@@ -501,7 +508,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         draftAndPublish: true;
     };
     attributes: {
-        Content: Schema.Attribute.RichText;
+        content: Schema.Attribute.Blocks;
         createdAt: Schema.Attribute.DateTime;
         createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
             Schema.Attribute.Private;
@@ -513,6 +520,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
             "api::page.page"
         > &
             Schema.Attribute.Private;
+        name: Schema.Attribute.UID;
         publishedAt: Schema.Attribute.DateTime;
         updatedAt: Schema.Attribute.DateTime;
         updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
